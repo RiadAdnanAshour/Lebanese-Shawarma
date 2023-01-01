@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم لبنان</title>
+    <link rel="shortcut icon" href="img/icontherice.png">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <style></style>
+    <script></script>
+
+</head>
+
+<body>
+
+
+    <nav>
+
+        <h1>مطعم شاورما لبنان</h1>
+        <ul>
+
+            <li><a href="#worktime">أوقات العمل</a></li>
+            <li><a href="Requests.html">الطلبات</a></li>
+            <li><a href="Menu.html">قائمة الطعام</a></li>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+        </ul>
+    </nav>
+    <section class="header">
+
+        <div class="textBox">
+            <h1>أهلا وسهلا بكم في مطعم شاورما لبنان</h1>
+            <p>نقدم لكم أشهى الشاورما من أنواع متعددة، لتستمتع بلذة وتذوق غامق في كل شريحة</p>
+            <a href="#address">قم بزيارتنا لمعرفة المزيد </a>
+        </div>
+
+
+        <div class="img1">
+            <img src="img/bac.jpg" alt="" width="90%" height="90%">
+        </div>
+
+
+
+
+    </section>
+    <h1 id="worktime">أوقات العمل</h1>
+    <div class="table">
+        <table border="1">
+            <tr>
+                <th>الى</th>
+                <th>من</th>
+                <th>اليوم</th>
+
+            </tr>
+            <tr>
+                <td>١:٣٠ ص</td>
+                <td>١١:٠٠ ص</td>
+                <td>السبت</td>
+            </tr>
+            <tr>
+                <td>١:٣٠ ص</td>
+                <td>١١:٠٠ ص</td>
+                <td>الأحد</td>
+            </tr>
+            <tr>
+                <td>١:٣٠ ص</td>
+                <td>١١:٠٠ ص</td>
+                <td>الاثنين</td>
+            </tr>
+            <tr>
+                <td>١:٣٠ ص</td>
+                <td>١١:٠٠ ص</td>
+                <td>الثلاثاء</td>
+            </tr>
+            <tr>
+                <td>١:٣٠ ص</td>
+                <td>١١:٠٠ ص</td>
+                <td>الأربعاء</td>
+            </tr>
+            <tr>
+                <td>١:٣٠ ص</td>
+                <td>١١:٠٠ ص</td>
+                <td>الخميس</td>
+            </tr>
+            <tr>
+                <td colspan="2">مغلق</td>
+                <td>الجمعة</td>
+            </tr>
+
+
+
+        </table>
+    </div>
+
+    <div class="formandtabel">
+
+        <div class="preview">
+            <table border="1" id="orderTable">
+                <tr>
+                    <th>المجموع</th>
+                    <th>سعر الوجبة</th>
+                    <th>كمية الوجبة</th>
+                    <th>نوع الوجبة</th>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+        <div class="form">
+            <form action="/order-submitted" method="dialog">
+                <label for="name">الاسم:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="address">عنوان التوصيل:</label><br>
+                <input type="text" id="address" name="address"><br>
+                <label for="phone">رقم الهاتف:</label><br>
+                <input type="tel" id="phone" name="customer_phone"><br><br>
+                <input type="submit" value="إرسال الطلب">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>نحن نقدر العرض الذي تقدمه لنا ونحن متطوعون للمساعدة في أي وقت. نرجو منك التواصل معنا لتقديم طلبك أو للاستفسار
+            عن أي شيء يخص مطعمنا. نحن نتطلع إلى تلبية كل احتياجاتك وإرضائك في أقرب وقت ممكن</p>
+        <div> <a target="_blank" href="https://www.facebook.com/shawerma.lebnan"><img
+                    src="img/facebook_icon-icons.com_59205.png" alt="" class="Social"></a>
+            <a target="_blank" href="https://wa.me/+9720599121002
+            "><img src="img/Whatsapp_icon.png" alt="" class="Social"></a>
+            <p id="address">العنوان: فلسطين/قطاع غزة /رفح /الكراج الشرقي</p>
+        </div>
+    </footer>
+
+    <script>
+        // جلب المنتجات من المحل المؤقت (Local Storage) وتخزينها في المتغير "products"
+        const products = JSON.parse(window.localStorage.getItem('products')) ?? [];
+        // العثور على الجدول
+        const table = document.querySelector('#orderTable');
+        var totalAmount = 0;
+        // التعامل مع كل منتج في المصفوفة "products" من خلال استدعاء الدالة "forEach()"
+        products.forEach(product => {
+            // إنشاء عنصر "tr" الجديد وعناصر "td" الجديدة
+            const row = document.createElement('tr');
+            const productName = document.createElement('td');
+            const price = document.createElement('td');
+            const quantity = document.createElement('td');
+            const total = document.createElement('td');
+            // تعبئة العناصر الجديدة بمعلومات المنتج
+            productName.textContent = product.productName;
+            price.textContent = product.price;
+            quantity.textContent = product.quantity;
+            total.textContent = product.price * product.quantity;
+            // إضافة العناصر الجديدة الى العنصر "tr" الجديد
+            row.appendChild(total);
+            row.appendChild(price);
+            row.appendChild(quantity);
+            row.appendChild(productName);
+            // إضافة العنصر "tr" الجديد الى الجدول
+            table.appendChild(row);
+            totalAmount += Number.parseInt(total.innerHTML);
+        });
+        const row = document.createElement('tr');
+        const totalText = document.createElement('td');
+        const totalValue = document.createElement('td');
+        totalText.innerHTML = 'المجموع النهائي للفاتورة';
+        totalText.setAttribute('colspan', '3');
+        totalValue.classList.add('totalValue');
+        totalValue.innerHTML = totalAmount;
+        totalText.style.background = '#000099';
+        totalValue.style.background = '#000099';
+        totalText.style.color = '#fff';
+        totalValue.style.color = '#fff';
+        row.appendChild(totalValue);
+        row.appendChild(totalText);
+        table.appendChild(row);
+        <!-- console.log(totalAmount); -->
+        localStorage.clear();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header {
+    /* min-width: 100vh; */
+
+    width: 100%;
+    height: 800px;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+
+    /* background-image: url(../img/1.jpg); */
+    /* background-position: center;
+    background-size: cover;
+    position: relative; */
+
+}
+
+nav {
+    background-color: #F1F7B5;
+    width: 100%;
+    height: 100px;
+    /* position: fixed; */
+    
+}
+
+
+nav ul {
+
+    padding: 25px;
+    padding-left: 450px;
+}
+
+nav ul li h1 {
+    position: relative;
+    right: 200%;
+    font-size: 1.8em;
+    color: #FD8A8A;
+    background-color: #FFDB89;
+    border: 2px solid white;
+
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 1px 30px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FD8A8A;
+    font-size: 2em;
+
+}
+
+nav ul li a:hover {
+    border: 2px solid white;
+    background-color: #FFDB89;
+}
+
+.textBox {
+    grid-column: span 1;
+    padding-top: 200px;
+    width: 90%;
+    color: #FD8A8A;
+    text-align: center;
+}
+
+.textBox h1 {
+    font-size: 60px;
+}
+
+.textBox p {
+    margin: 10px 0 35px;
+}
+
+.textBox a {
+    display: inline-block;
+    text-decoration: none;
+    color: #FD8A8A;
+    border: 2px solid #9EA1D4;
+    font-size: 30px;
+
+}
+
+.textBox a:hover {
+    border: 2px solid white;
+    background-color: #9EA1D4;
+
+}
+
+.img1 {
+    padding: 50px;
+    position: relative;
+    top: 5%;
+    left: 10%;
+}
+
+
+/* #worktime {
+    width: 100%;
+    height: 80px;
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    font-size: 4em;
+} */
+
+#worktime {
+    width: 100%;
+    height: 80px;
+    background-color: #F1F7B5; /* تغيير لون الخلفية */
+    color: #333; /* تغيير لون النص */
+    text-align: center; /* وسط النص */
+    font-size: 4em; /* تغيير حجم الخط */
+}
+
+
+/* .table {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 100px;
+    background-color: #eee;
+}
+
+.table table {
+    text-align: center;
+    position: relative;
+    left: 35%;
+    width: 600px;
+} */
+
+
+.table {
+    background-color: #eee;
+    width: 100%;
+    /* نسبة العرض للجدول */
+    margin: 0 auto;
+    /* اعتماد الجدول في الوسط */
+    border: 1px solid #eee;
+    /* تحديد خطوط الجدول */
+    border-collapse: collapse;
+    /* اخفاء الخطوط الزائدة */
+    font-size: 1.2em;
+    /* حجم الخط في الجدول */
+    text-align: center;
+
+}
+
+.table table {
+    position: relative;
+    left: 41%;
+    margin-top: 10px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #eee;
+    /* تحديد خطوط الجدول */
+    padding: 10px;
+    /* مسافة النص من حواف العنصر */
+}
+
+.table th {
+    background-color: #FD8A8A;
+    /* لون الخلفية للعنصر الأعلى */
+    color: white;
+    /* لون النص في العنصر الأعلى */
+}
+
+.table tr:nth-child(even) {
+    background-color: #eee;
+    /* لون الخلفية للصفوف الزوجية */
+}
+
+.table tr:nth-child(odd) {
+    background-color: white;
+    /* لون الخلفية للصفوف الفردية */
+}
+
+.form {
+    width: 100%;
+    padding: 30px 0;
+    background-color: #eee;
+    padding-bottom: 150px;
+
+}
+
+.form form {
+    width: 50%;
+    /* نسبة العرض للنموذج */
+    margin: 0 auto;
+    /* يوزع النموذج في وسط الصفحة */
+    text-align: right;
+    /* يحدد موضع النص في النموذج */
+}
+
+.form label {
+    display: block;
+    /* يجعل العلامة كل علامة في وحدة واحدة */
+    font-size: 1.5em;
+    /* حجم الخط في العلامة */
+    color: #FD8A8A;
+    /* لون الخط في العلامة */
+    margin: 20px 0;
+    /* يحدد مسافة العلامة من العنصر السابق والتالي */
+}
+
+.form input[type="text"] , input[type="tel"]{
+    width: 80%;
+    /* نسبة العرض للخانة النصية */
+    height: 40px;
+    /* ارتفاع الخانة النصية */
+    border: 2px solid #9EA1D4;
+    /* تحديد حدود الخانة النصية */
+    border-radius: 5px;
+    /* تحديد نوع الحدود (متداخلة) */
+    padding: 0 10px;
+
+}
+
+.form input[type="submit"] {
+    width: 30%;
+    /* نسبة العرض للزر */
+    height: 50px;
+    /* ارتفاع الزر */
+    background-color: #FD8A8A;
+    /* لون الخلفية للزر */
+    color: white;
+    /* لون النص في الزر */
+    font-size: 1.5em;
+    /* حجم الخط في الزر */
+    border: none;
+    /* ازالة الحدود من الزر */
+    border-radius: 5px;
+    /* تحديد نوع الحدود (متداخلة) */
+    cursor: pointer;
+    /* تحديد المؤشر كقلم عند المرور على الزر */
+}
+
+.form input[type="submit"]:hover {
+    background-color: #9EA1D4;
+    /* لون الخلفية للزر عند المرور عليه */
+}
+
+/* footer {
+    text-align: center;
+    background-color: #eee;
+    font-size: 25px;
+    color: #FD8A8A;
+} */
+
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    color: #FD8A8A;
+    font-size: 25px;
+    padding: 30px 0;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  
+  footer a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .Social {
+    width: 50px;
+    height: 50px;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #FD8A8A;
+    border: 2px solid #9EA1D4;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+   
+  }
+  
+  footer a:hover {
+    border: 2px solid white
+  }
+
+
+.orders h1 {
+    width: 100%;
+    height: 80px;
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    font-size: 4em;
+}
+
+.meals {
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 1000px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.meals .six {
+    grid-column: span 3;
+
+}
+
+.meals .six img {
+    position: absolute;
+    right: 80%;
+    bottom: -30%;
+    padding: 20px;
+
+}
+
+.meals .saven img {
+    position: absolute;
+    right: 25%;
+    bottom: -28%;
+    padding: 20px;
+
+}
+
+
+
+
+
+.meals .saven {
+    grid-column: span 2;
+}
+
+.Lebanocake {
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 800px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.img9 {
+    position: absolute;
+    right: 30%;
+    bottom: -90%;
+    padding: 20px;
+}
+
+.img10 {
+    position: absolute;
+    right: 30%;
+    bottom: -120%;
+    padding: 20px;
+}
+
+.SafayehP1 {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.Safayeh {
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 800px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.coldDrinks {
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.sandwiches {
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.fino div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    text-align: right;
+    margin-right: 10px;
+    padding-top: 30px;
+}
+
+.salta {
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+span {
+    background-color: yellow;
+    color: black;
+    border: 2px solid yellow;
+    border-radius: 15%;
+    margin-right: 40px;
+    padding: 5px;
+
+}

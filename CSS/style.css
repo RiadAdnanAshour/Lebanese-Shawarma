@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header {
+    /* min-width: 100vh; */
+
+    width: 100%;
+    height: 800px;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+
+  
+    padding: 0 50px;
+
+}
+
+nav {
+    background-color: #009900;
+    width: 100%;
+    height: 100px;
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+
+nav ul {
+
+    /* padding-left: 450px; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav h1 {
+    position: relative;
+    width: fit-content;
+    font-size: 2em;
+    background-color: #009900;
+    padding: 10px 15px;
+    color: #000099;
+
+}
+
+nav ul li {
+    margin: 1px 30px;
+    list-style: none;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    transition: 300ms;
+    padding: 5px 10px;
+    border-radius: 3px;
+
+}
+
+nav ul li a:hover {
+    /* border: 2px solid white; */
+    background-color: #000099;
+}
+
+.textBox {
+    grid-column: span 1;
+    padding-top: 200px;
+    width: 90%;
+    color: #009900;
+    text-align: center;
+}
+
+.textBox h1 {
+    font-size: 60px;
+}
+
+.textBox p {
+    margin: 10px 0 35px;
+    font-size: 28px;
+}
+
+.textBox a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000099;
+    border: 2px solid #9EA1D4;
+    font-size: 30px;
+
+}
+
+.textBox a:hover {
+    border: 2px solid 000099;
+    background-color: #ffffff;
+
+}
+
+.img1 {
+    height: 750px;
+    padding: 50px;
+    position: relative;
+    top: 5%;
+    /* left: 10%; */
+}
+
+
+
+#worktime {
+    width: 100%;
+    height: 80px;
+    background-color: #009900;
+    /* تغيير لون الخلفية */
+    color: #ffffff;
+    /* تغيير لون النص */
+    text-align: center;
+    /* وسط النص */
+    font-size: 4em;
+    /* تغيير حجم الخط */
+}
+
+
+
+.table {
+    background-color: #ffffff;
+    width: 100%;
+    /* نسبة العرض للجدول */
+    margin: 0 auto;
+    /* اعتماد الجدول في الوسط */
+    /* border: 1px solid #eee; */
+    /* تحديد خطوط الجدول */
+    border-collapse: collapse;
+    /* اخفاء الخطوط الزائدة */
+    font-size: 1.2em;
+    /* حجم الخط في الجدول */
+    text-align: center;
+
+}
+
+.table table {
+    color: #000099;
+    position: relative;
+    left: 41%;
+    margin-top: 10px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #000099;
+    /* تحديد خطوط الجدول */
+    padding: 10px;
+    /* مسافة النص من حواف العنصر */
+}
+
+.table th {
+    background-color: #009900;
+    /* لون الخلفية للعنصر الأعلى */
+    color: white;
+    /* لون النص في العنصر الأعلى */
+}
+
+.table tr:nth-child(even) {
+    background-color: #eee;
+    /* لون الخلفية للصفوف الزوجية */
+}
+
+.table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+    ;
+    /* لون الخلفية للصفوف الفردية */
+}
+
+.table tr:hover {
+    background-color: #e6e6e6;
+    /* لون رمادي خفيف */
+}
+
+.form {
+    width: 100%;
+    padding: 30px 0;
+    background-color: #eee;
+    padding-bottom: 150px;
+    position: relative;
+    /* left: 20%; */
+    /* grid-column: span 2; */
+
+}
+
+.form form {
+    width: 100%;
+    /* نسبة العرض للنموذج */
+    /* margin:  auto; */
+    /* يوزع النموذج في وسط الصفحة */
+    text-align: right;
+    /* يحدد موضع النص في النموذج */
+}
+
+.form label {
+    display: block;
+    /* يجعل العلامة كل علامة في وحدة واحدة */
+    font-size: 1.5em;
+    /* حجم الخط في العلامة */
+    color: #009900;
+    /* لون الخط في العلامة */
+    margin: 20px 0;
+    /* يحدد مسافة العلامة من العنصر السابق والتالي */
+}
+
+.form input[type="text"],
+input[type="tel"] {
+    width: 80%;
+    /* نسبة العرض للخانة النصية */
+    height: 40px;
+    /* ارتفاع الخانة النصية */
+    border: 2px solid #9EA1D4;
+    /* تحديد حدود الخانة النصية */
+    border-radius: 5px;
+    /* تحديد نوع الحدود (متداخلة) */
+    padding: 0 10px;
+
+}
+
+.form input[type="submit"] {
+    width: 30%;
+    /* نسبة العرض للزر */
+    height: 50px;
+    /* ارتفاع الزر */
+    background-color: #009900;
+    /* لون الخلفية للزر */
+    color: white;
+    /* لون النص في الزر */
+    font-size: 1.5em;
+    /* حجم الخط في الزر */
+    border: none;
+    /* ازالة الحدود من الزر */
+    border-radius: 5px;
+    /* تحديد نوع الحدود (متداخلة) */
+    cursor: pointer;
+    /* تحديد المؤشر كقلم عند المرور على الزر */
+}
+
+.form input[type="submit"]:hover {
+    background-color: #9EA1D4;
+    /* لون الخلفية للزر عند المرور عليه */
+}
+
+/* footer {
+    text-align: center;
+    background-color: #eee;
+    font-size: 25px;
+    color: #FD8A8A;
+} */
+
+
+
+.preview {
+    /* grid-column: span 1; */
+    background-color: #eee;
+    width: 100%;
+    /* نسبة العرض للجدول */
+    margin: 0 auto;
+    /* اعتماد الجدول في الوسط */
+    border: 1px solid #eee;
+    /* تحديد خطوط الجدول */
+    border-collapse: collapse;
+    /* اخفاء الخطوط الزائدة */
+    font-size: 1.2em;
+    /* حجم الخط في الجدول */
+    text-align: center;
+
+}
+
+.preview table {
+    color: #000099;
+    position: relative;
+    /* bottom: 100%; */
+    left: 20%;
+    margin-top: 10px;
+}
+
+.preview table th,
+.preview table td {
+    border: 1px solid #000099;
+    /* تحديد خطوط الجدول */
+    padding: 10px;
+    /* مسافة النص من حواف العنصر */
+}
+
+.preview table th {
+    background-color: #009900;
+    /* لون الخلفية للعنصر الأعلى */
+    color: white;
+    /* لون النص في العنصر الأعلى */
+}
+
+
+footer {
+    background-color: #000099;
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #e6e6e6;
+    /* لون رمادي خفيف */
+}
+
+.Social {
+    width: 50px;
+    height: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FD8A8A;
+    border: 2px solid #9EA1D4;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+footer a:hover {
+    border: 2px solid white
+}
+
+.formandtabel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: repeat(1, 1fr); */
+    width: 100%;
+    padding: 30px;
+    margin-top: 50px;
+    background-color: #eee;
+    /* padding-bottom: 150px; */
+}
